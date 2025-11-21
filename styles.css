@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color-scheme: dark light;
+  color: #efece3;
+  height: 100%;
+
+  flex-direction: column;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+  width: calc(100% -70px);
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  margin-inline: 70px;
+  margin-block: 30px;
+}
+
+/* header section */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 70px;
+  padding-block: 20px;
+  /* border: 1px solid white; */
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-wrapper a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
+}
+
+.logo-wrapper img {
+  height: 3.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: white;
+  transition: colors 2s linear;
+}
+
+nav a:hover {
+  border-color: lightcoral;
+  background-color: rgb(102, 49, 49);
+}
+
+header .nav-btn {
+  border: 0.1px solid rgb(144, 140, 140);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .nav-btn a {
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.active-nav-btn,
+header .nav-btn a:hover {
+  background-color: rgb(161, 52, 52);
+}
+
+/* footer section */
+footer {
+  padding: 70px;
+  background-color: black;
+}
+
+footer .top-sec {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.ft-a {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.ft-a a img {
+  height: 5rem;
+}
+
+.logo-txt-footer {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.logo-txt-footer span::first-letter {
+  color: yellow;
+}
+
+.desc-txt-footer p {
+  margin-bottom: 5px;
+}
+
+.dev-kant-kumar {
+  text-decoration: none;
+  color: #f25912;
+  font-weight: 500;
+  cursor: pointer;
+}
+.dev-kant-kumar:hover {
+  text-decoration: 0.2px solid white underline;
+  transform: all 0.2s linear;
+}
+
+.social-link-wrapper-footer p {
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.social-link-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link-footer a {
+  text-decoration: none;
+  border: 2px solid #161120;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #1b112e;
+  color: white;
+}
+
+.ft-b p,
+.ft-c .cate-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-block-end: 30px;
+}
+
+.ft-b div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ft-b div a {
+  display: block;
+  text-decoration: none;
+  color: #7442d1;
+  font-weight: 400;
+  font-size: 18px;
+}
+.ft-b div a:hover {
+  transition: color 0.2s linear;
+  color: #8855e7;
+}
+
+.git-footer {
+  background: rgb(20, 19, 19);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(42, 41, 41);
+  margin-bottom: 25px;
+}
+
+.git-footer-a p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.git-footer-b a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer hr {
+  margin-block: 20px;
+  border: 0.1px solid rgb(172, 168, 168);
+}
+
+footer .bottom-sec {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+footer .legal-pages-links {
+  display: flex;
+  gap: 15px;
+}
+
+footer .legal-pages-links a {
+  text-decoration: none;
+}
+
+.footer-heart-icon {
+  color: red;
+}
