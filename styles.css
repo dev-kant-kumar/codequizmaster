@@ -16,12 +16,11 @@ body {
 }
 
 main {
-  width: calc(100% -70px);
-  border: 2px solid black;
-  border-radius: 20px;
-  padding: 20px;
-  margin-inline: clamp(1.5rem, 4.3vw, 5rem);
   margin-block: 30px;
+}
+
+main h1 {
+  text-align: center;
 }
 
 /* header section */
@@ -33,6 +32,7 @@ header {
   padding-inline: clamp(1.5rem, 4.3vw, 5rem);
   padding-block: 20px;
   /* border: 1px solid white; */
+  background: black;
 }
 
 .nav-menu-toggler {
@@ -340,6 +340,142 @@ footer .legal-pages-links a {
   color: red;
 }
 
+/* form section */
+
+/* signup form */
+
+form {
+  width: 50%;
+  max-width: 450px; /* perfect size */
+  border: 1px solid rgb(150, 147, 147);
+  border-radius: 20px;
+  padding: clamp(0.5rem, 2vw, 2rem);
+  margin-inline: auto;
+  background: black;
+}
+
+.form-head {
+  text-align: center;
+  padding-block: 15px;
+}
+
+.form-head h1 {
+  margin-block-end: 10px;
+}
+
+.form-head p {
+  font-weight: 300;
+}
+
+/* form body section */
+
+.form-body {
+  margin-block: 10px;
+}
+
+.form-field {
+  padding-inline: 10px;
+  padding-block: 5px;
+}
+
+.form-field label {
+}
+.form-field label::after {
+  content: "*";
+  color: red;
+  padding-inline-start: 5px;
+}
+
+.input-field {
+  border: 2px solid rgb(115, 111, 111);
+  border-radius: 10px;
+  margin-block: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.input-field i {
+  padding-inline: 12px;
+  color: rgb(115, 111, 111);
+}
+
+.input-field input,
+.form-field select {
+  padding: 10px 0px;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: transparent;
+}
+
+.form-field select,
+.form-field option {
+  color: gray;
+}
+
+.input-field:hover,
+.form-field select:hover {
+  border-color: rgb(41, 90, 189);
+  transition: color 0.2s linear;
+}
+
+.input-field:hover i {
+  color: rgb(41, 90, 189);
+}
+
+.error-box {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  display: none;
+}
+
+.error-box .error-field,
+.error-box i {
+  font-size: 0.8rem;
+  color: rgb(165, 78, 78);
+}
+
+.form-foot {
+  padding: 10px;
+}
+
+.form-foot button {
+  margin-block: 10px;
+  padding-block: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  background-color: rgb(57, 84, 191);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-foot button:hover {
+  background-color: rgb(64, 97, 231);
+  transition: color 0.2s linear;
+}
+
+.form-switch,
+.terms-txt {
+  text-align: center;
+}
+
+.terms-txt a,
+.form-switch a {
+  text-decoration: none;
+  color: rgb(19, 175, 167);
+  line-height: 1.5rem;
+}
+
+.hide {
+  display: none;
+}
+
 @media (max-width: 768px) {
   header section nav,
   header .nav-btn {
@@ -348,5 +484,8 @@ footer .legal-pages-links a {
 
   .nav-menu-toggler {
     display: block;
+  }
+  form {
+    width: 90%;
   }
 }

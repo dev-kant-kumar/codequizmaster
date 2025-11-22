@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signin Page | Code Quiz Master</title>
+    <title>Forgot Password Page | Code Quiz Master</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="public/images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -25,12 +25,10 @@
                     <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
                 </svg>
 
-                <h1>Login</h1>
-                <p>Sign in to level up your skills</p>
+                <h1>Forgot Password</h1>
+                <p>Find your account</p>
             </section>
             <section class="form-body">
-
-
                 <div class="form-field">
                     <label for="username">Username or Email </label>
                     <div class="input-field">
@@ -42,29 +40,12 @@
                         <p class="error-field">Username is required!</p>
                     </div>
                 </div>
-
-
-                <div class="form-field">
-                    <label for="password">Password </label>
-                    <div class="input-field">
-                        <i class="ri-lock-2-line"></i>
-                        <input type="password" id="password" name="password" placeholder="Create a strong password">
-
-                        <i class="ri-eye-line show"></i>
-                        <i class="ri-eye-close-line hide"></i>
-
-                    </div>
-                    <div class="error-box">
-                        <i class="ri-error-warning-line"></i>
-                        <p class="error-field">Password is!</p>
-                    </div>
-                </div>
             </section>
 
             <section class="form-foot">
-                <p class="terms-txt"><a href="forgotpassword.php">Forgot your password?</a></p>
-                <button type="submit" name="signup">Sign in</button>
-                <p class="form-switch">Don't have an account? <a href="signup.php">Create account</a></p>
+                <!-- <p class="terms-txt"><a href="">Can't reset your password?</a></p> -->
+                <button type="submit" name="signup">Continue</button>
+                <p class="form-switch">Back to <a href="signin.php">Login</a></p>
             </section>
         </form>
 
