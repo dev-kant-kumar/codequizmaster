@@ -18,6 +18,7 @@
 
     </main>
     <?php include "components/footer.php"; ?>
+     <script src="script.js"></script>
 
 </body>
 

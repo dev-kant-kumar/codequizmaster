@@ -20,7 +20,7 @@ main {
   border: 2px solid black;
   border-radius: 20px;
   padding: 20px;
-  margin-inline: 70px;
+  margin-inline: clamp(1.5rem, 4.3vw, 5rem);
   margin-block: 30px;
 }
 
@@ -30,11 +30,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 70px;
+  padding-inline: clamp(1.5rem, 4.3vw, 5rem);
   padding-block: 20px;
   /* border: 1px solid white; */
 }
 
+.nav-menu-toggler {
+  display: none;
+}
 .logo-wrapper {
   display: flex;
   align-items: center;
@@ -43,13 +46,13 @@ header {
 
 .logo-wrapper a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 1.5vw, 3rem);
   font-weight: 900;
   color: white;
 }
 
 .logo-wrapper img {
-  height: 3.5rem;
+  height: clamp(2rem, 3.5vw, 5rem);
 }
 
 nav {
@@ -57,9 +60,8 @@ nav {
   gap: 10px;
 }
 
-nav a {
+.nav-menu {
   text-decoration: none;
-  border: 1px solid transparent;
   border-radius: 8px;
   padding: 10px 20px;
   font-weight: 500;
@@ -68,9 +70,12 @@ nav a {
   transition: colors 2s linear;
 }
 
-nav a:hover {
-  border-color: lightcoral;
-  background-color: rgb(102, 49, 49);
+.nav-menu:hover {
+  background-color: rgb(65, 95, 116);
+}
+
+.active-nav-menu {
+  background: rgb(8, 118, 161);
 }
 
 header .nav-btn {
@@ -84,7 +89,6 @@ header .nav-btn {
 
 header .nav-btn a {
   text-decoration: none;
-  background-color: transparent;
   border-radius: 10px;
   color: white;
   padding: 10px 20px;
@@ -92,14 +96,115 @@ header .nav-btn a {
   font-size: 0.9rem;
 }
 
-.active-nav-btn,
 header .nav-btn a:hover {
-  background-color: rgb(161, 52, 52);
+  background-color: rgb(94, 41, 41);
+}
+
+.nav-btn-active {
+  background-color: rgb(66, 33, 33);
+}
+
+/* moblie nav menu styling section */
+.mobile-nav-menu {
+  border-left: 0.1px solid rgb(155, 153, 153);
+  background: #000;
+  /* opacity: 0.9; */
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 60%;
+  height: 100dvh;
+  overflow-y: scroll;
+  display: none;
+}
+
+.open-nav-menu {
+  display: block;
+}
+
+.mobile-nav-menu .sec-a {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(91, 5, 99);
+  position: relative;
+}
+
+.mobile-nav-menu .sec-a p {
+  font-size: 1.2rem;
+  text-align: center;
+  flex-grow: 1;
+  padding-block: 50px;
+  border-bottom: 2px solid rgb(66, 4, 4);
+}
+
+.mobile-nav-menu .sec-a svg {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.mobile-nav-menu .sec-b {
+}
+
+.mobile-nav-menu .sec-b a,
+.mobile-nav-menu .sec-c a {
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  color: inherit;
+  display: block;
+  text-align: left;
+  padding: 10px 30px;
+
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.m-nav-menu-active-item {
+  background-color: rgb(31, 124, 161);
+}
+
+.mobile-nav-menu .sec-c {
+}
+
+.mobile-nav-menu .sec-c a {
+}
+.sec-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px;
+  color: rgb(181, 73, 23);
+  background-color: rgb(40, 2, 51);
+  color: white;
+}
+
+.mobile-nav-menu > div > a:hover {
+  border-left: 3px solid purple;
+  background-color: rgb(247, 8, 247);
+  color: white;
+}
+
+.mobile-logo-wrapper {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  border-top: 1px solid rgb(61, 64, 64);
+  padding: 20px;
+}
+
+.mobile-logo-wrapper a {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.mobile-logo-wrapper img {
+  height: 1.5rem;
 }
 
 /* footer section */
 footer {
-  padding: 70px;
+  padding: clamp(1.5rem, 4.3vw, 5rem);
   background-color: black;
 }
 
@@ -107,6 +212,8 @@ footer .top-sec {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .ft-a {
@@ -153,6 +260,7 @@ footer .top-sec {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .social-link-footer a {
@@ -215,6 +323,8 @@ footer .bottom-sec {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 footer .legal-pages-links {
@@ -228,4 +338,15 @@ footer .legal-pages-links a {
 
 .footer-heart-icon {
   color: red;
+}
+
+@media (max-width: 768px) {
+  header section nav,
+  header .nav-btn {
+    display: none;
+  }
+
+  .nav-menu-toggler {
+    display: block;
+  }
 }
