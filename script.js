@@ -39,13 +39,13 @@ const current = window.location.pathname;
 console.log(current);
 
 navMenu.forEach((menu) => {
-  if (menu.href.includes(current)) {
+  if (menu.href.endsWith(current)) {
     menu.classList.add("active-nav-menu");
   }
 });
 
 mobileNavMenu.forEach((menu) => {
-  if (menu.href.includes(current)) {
+  if (menu.href.endsWith(current)) {
     menu.classList.add("m-nav-menu-active-item");
   }
 });
@@ -53,7 +53,7 @@ mobileNavMenu.forEach((menu) => {
 console.log(navBtnItems);
 
 navBtnItems.forEach((item) => {
-  if (item.href.includes(current)) {
+  if (item.href.endsWith(current)) {
     navBtnItems.forEach((i) => i.classList.remove("nav-btn-active"));
     item.classList.add("nav-btn-active");
   }
