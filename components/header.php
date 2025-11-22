@@ -11,7 +11,7 @@
     </section>
     <section>
         <nav class="nav-menu-container">
-            <a class="nav-menu" href="index.php">Home</a>
+            <a class="nav-menu active-nav-menu" href="index.php">Home</a>
             <a class="nav-menu" href="quiz.php">Quiz</a>
             <a class="nav-menu" href="updates.php">Updates</a>
             <a class="nav-menu" href="about.php">About</a>
@@ -38,7 +38,7 @@
         </div>
         <div class="sec-b">
             <p class="sec-title">Quiz Links</p>
-            <a class="m-nav-menu-items" href="index.php">Home</a>
+            <a class="m-nav-menu-items m-nav-menu-active-item" href="index.php">Home</a>
             <a class="m-nav-menu-items" href="quiz.php">Quiz</a>
             <a class="m-nav-menu-items" href="updates.php">Updates</a>
             <a class="m-nav-menu-items" href="about.php">About</a>

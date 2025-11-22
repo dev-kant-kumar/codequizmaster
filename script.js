@@ -6,10 +6,6 @@ const openMobileMenu = document.querySelector(".nav-menu-toggler");
 const closeMobileMenu = document.querySelector(".close-btn");
 const mobileMenu = document.querySelector(".mobile-nav-menu");
 
-console.log(openMobileMenu);
-console.log(closeMobileMenu);
-console.log(mobileMenu);
-
 openMobileMenu.addEventListener("click", () => {
   mobileMenu.classList.add("open-nav-menu");
 });
@@ -19,7 +15,6 @@ closeMobileMenu.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (e) => {
-  console.log("user cliked here :", e.target);
   if (
     mobileMenu.classList.contains("open-nav-menu") &&
     !mobileMenu.contains(e.target) &&
@@ -36,21 +31,20 @@ const mobileNavMenu = document.querySelectorAll(".m-nav-menu-items");
 const navBtnItems = document.querySelectorAll(".nav-btn-items");
 
 const current = window.location.pathname;
-console.log(current);
 
 navMenu.forEach((menu) => {
   if (menu.href.endsWith(current)) {
+    navMenu.forEach((i) => i.classList.remove("active-nav-menu"));
     menu.classList.add("active-nav-menu");
   }
 });
 
 mobileNavMenu.forEach((menu) => {
   if (menu.href.endsWith(current)) {
+    mobileMenu.forEach((i) => i.classList.remove("m-nav-menu-active-item"));
     menu.classList.add("m-nav-menu-active-item");
   }
 });
-
-console.log(navBtnItems);
 
 navBtnItems.forEach((item) => {
   if (item.href.endsWith(current)) {
