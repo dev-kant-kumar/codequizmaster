@@ -144,8 +144,8 @@ header .nav-btn a:hover {
   right: 15px;
 }
 
-.mobile-nav-menu .sec-b {
-}
+/* .mobile-nav-menu .sec-b {
+} */
 
 .mobile-nav-menu .sec-b a,
 .mobile-nav-menu .sec-c a {
@@ -164,11 +164,11 @@ header .nav-btn a:hover {
   background-color: rgb(31, 124, 161);
 }
 
-.mobile-nav-menu .sec-c {
+/* .mobile-nav-menu .sec-c {
 }
 
 .mobile-nav-menu .sec-c a {
-}
+} */
 .sec-title {
   font-size: 0.9rem;
   font-weight: 700;
