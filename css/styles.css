@@ -444,7 +444,7 @@ form {
 }
 
 .form-foot button {
-  margin-block: 10px;
+  margin-block: 25px;
   padding-block: 15px;
   border-radius: 10px;
   border: none;
@@ -453,6 +453,11 @@ form {
   background-color: rgb(57, 84, 191);
   font-size: 1rem;
   font-weight: 500;
+}
+
+.form-foot button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .form-foot button:hover {
@@ -473,6 +478,16 @@ form {
 }
 
 .hide {
+  display: none;
+}
+
+/* form  message section */
+.form-msg {
+  border: 0.1px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+  margin-inline: 10px;
+  text-align: center;
   display: none;
 }
 

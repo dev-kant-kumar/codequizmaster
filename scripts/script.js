@@ -41,7 +41,7 @@ navMenu.forEach((menu) => {
 
 mobileNavMenu.forEach((menu) => {
   if (menu.href.endsWith(current)) {
-    mobileMenu.forEach((i) => i.classList.remove("m-nav-menu-active-item"));
+    mobileNavMenu.forEach((i) => i.classList.remove("m-nav-menu-active-item"));
     menu.classList.add("m-nav-menu-active-item");
   }
 });

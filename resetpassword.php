@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset Password Page | Code Quiz Master</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" href="public/images/logo.png" type="image/x-icon">
 </head>
 
@@ -18,7 +18,7 @@
 
     </main>
     <?php include "components/footer.php"; ?>
-<script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
