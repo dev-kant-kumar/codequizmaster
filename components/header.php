@@ -22,6 +22,17 @@
         <a class="nav-btn-items" href="signin.php">Sing in</a>
         <a class="nav-btn-items" href="help.php">Help</a>
     </section>
+
+    <section class="account-center">
+        <div>
+            <a class="nav-menu" href="dashboard.php">Dashboard</a>
+            <a class="nav-menu" href="profile.php">Profile</a>
+        </div>
+        <div class="avatar-wrapper">
+            <img src="" alt="" class="avatar">
+            <p class="no-avatar"></p>
+        </div>
+    </section>
     <section class="nav-menu-toggler">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"

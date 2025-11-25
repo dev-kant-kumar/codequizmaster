@@ -196,7 +196,7 @@ signupForm.addEventListener("submit", (e) => {
   checkConfirmPassword(data.password, data.cpassword);
 
   if (formErrors.size === 0) {
-    setFormMessage("green", "Form Submitted Successfully");
+    createAccount(formData);
   } else {
     setFormMessage("red", "Fix the errors to proceed!");
   }
@@ -207,3 +207,32 @@ signupForm.addEventListener("keydown", (e) => {
     e.preventDefault();
   }
 });
+
+const createAccount = async (user) => {
+  const url = "controllers/signup.php";
+  signupBtn.textContent = "Creating....";
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      body: user,
+    });
+
+    const data = await res.json();
+    console.log("data : ", data);
+    if (data.status) {
+      setFormMessage("green", "Account Created Successfully");
+    } else {
+      if (data.error.includes("Duplicate entry")) {
+        setFormMessage("red", "Account already exist. Please login!");
+      } else {
+        console.log("error : ", data.error);
+        setFormMessage("red", "Account creation failed. Try again!");
+      }
+    }
+  } catch (error) {
+    console.log("Having error while creating account", error);
+    setFormMessage("red", "Something went wrong. Try again!");
+  } finally {
+    signupBtn.textContent = "Create Account";
+  }
+};

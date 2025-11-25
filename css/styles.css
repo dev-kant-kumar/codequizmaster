@@ -17,6 +17,7 @@ body {
 
 main {
   margin-block: 30px;
+  margin-inline: 50px;
 }
 
 main h1 {
@@ -102,6 +103,43 @@ header .nav-btn a:hover {
 
 .nav-btn-active {
   background-color: rgb(66, 33, 33);
+}
+
+/* account center  */
+.account-center {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: ;
+  align-items: center;
+  gap: 20px;
+  display: none;
+}
+
+.account-center .avatar-wrapper {
+  border: 1px solid rgb(173, 169, 169);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.account-center .avatar-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.account-center .avatar-wrapper p {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: rgb(110, 67, 7);
+  color: white;
 }
 
 /* moblie nav menu styling section */
@@ -489,6 +527,89 @@ form {
   margin-inline: 10px;
   text-align: center;
   display: none;
+}
+
+/* dashboard page */
+.welcome-banner {
+  border: 1px solid #7442d1;
+  border-bottom: 5px solid #7442d1;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.welcome-banner .greet-line {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.welcome-banner .message-line {
+  margin-block: 20px;
+  font-size: 1.1rem;
+}
+
+.welcome-banner button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: #7442d1;
+  color: white;
+  cursor: pointer;
+  margin-block-start: 10px;
+}
+
+.welcome-banner button:hover {
+  background: #5a26ba;
+  transition: 0.2s linear;
+}
+
+/* profile page */
+.profile-head {
+  border: none;
+  border-radius: 10px;
+  height: 250px;
+  padding: 20px;
+  position: relative;
+  background: linear-gradient(45deg, green, rgb(7, 52, 187));
+}
+
+.profile-pic-sec {
+  height: 200px;
+  width: 200px;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: black;
+}
+
+.profile-body {
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 700px;
+  margin-block-start: 50px;
+  padding: 20px;
+}
+
+.profile-body .txt1 {
+}
+.logged-user-name {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.logged-user-username {
+  width: fit-content;
+  padding-inline: 10px;
+  padding-block: 5px;
+  background-color: black;
+  border: none;
+  border-radius: 30px;
+  margin-block: 20px;
+}
+
+.profile-foot {
 }
 
 @media (max-width: 768px) {

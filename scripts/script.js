@@ -52,3 +52,63 @@ navBtnItems.forEach((item) => {
     item.classList.add("nav-btn-active");
   }
 });
+
+// check if user data is saved
+
+const userFound = JSON.parse(localStorage.getItem("user"));
+
+// handing routes if user is logged in
+
+const removedRoutes =
+  "/codequizmaster/signup.php" || "/codequizmaster/signin.php";
+
+if (userFound) {
+  switch (current) {
+    case "/codequizmaster/signup.php":
+      window.location.href = "dashboard.php";
+      break;
+    case "/codequizmaster/signin.php":
+      window.location.href = "dashboard.php";
+      break;
+  }
+} else {
+  switch (current) {
+    case "/codequizmaster/dashboard.php":
+      window.location.href = "signin.php";
+      break;
+
+    case "/codequizmaster/profile.php":
+      window.location.href = "signin.php";
+      break;
+  }
+}
+
+// nav dom
+const accountCenter = document.querySelector(".account-center");
+const navBtn = document.querySelector(".nav-btn");
+const avatar = document.querySelector(".avatar");
+const noAvatar = document.querySelector(".no-avatar");
+
+if (userFound) {
+  console.log("Logged in user : ", userFound);
+  // changing navbar
+  navBtn.style.display = "none";
+  accountCenter.style.display = "flex";
+
+  // check if user has avatar
+
+  if (userFound?.avatar) {
+    noAvatar.style.display = "none";
+    avatar.setAttribute("src", user.avatar);
+  } else {
+    avatar.style.display = "none";
+    noAvatar.textContent = userFound?.name.charAt(0).toUpperCase();
+  }
+
+  // dashboard section
+  if (current === "/codequizmaster/dashboard.php") {
+    const userForBanner = document.querySelector(".user");
+    const firstName = userFound?.name.split(" ")[0];
+    userForBanner.textContent = firstName + " 👋";
+  }
+}

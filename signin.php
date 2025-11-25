@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" href="public/images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -16,7 +15,7 @@
 
     <main>
 
-        <form action="">
+        <form action="" id="signin-form">
 
             <section class="form-head">
                 <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#4dabf7" stroke-width="1.5"
@@ -28,18 +27,19 @@
                 <h1>Login</h1>
                 <p>Sign in to level up your skills</p>
             </section>
+            <section class="form-msg"></section>
             <section class="form-body">
 
 
                 <div class="form-field">
-                    <label for="username">Username or Email </label>
+                    <label for="identifier">Username or Email</label>
                     <div class="input-field">
                         <i class="ri-at-line"></i>
-                        <input type="text" id="username" name="username" placeholder="Choose a unique username">
+                        <input type="text" id="identifier" name="identifier" placeholder="Enter username">
                     </div>
-                    <div class="error-box">
+                    <div class="error-box username-error">
                         <i class="ri-error-warning-line"></i>
-                        <p class="error-field">Username is required!</p>
+                        <p class="error-field"></p>
                     </div>
                 </div>
 
@@ -50,20 +50,20 @@
                         <i class="ri-lock-2-line"></i>
                         <input type="password" id="password" name="password" placeholder="Create a strong password">
 
-                        <i class="ri-eye-line show"></i>
-                        <i class="ri-eye-close-line hide"></i>
+                        <i class="ri-eye-line" id="show-password-icon"></i>
+                        <i class="ri-eye-close-line hide" id="hide-password-icon"></i>
 
                     </div>
-                    <div class="error-box">
+                    <div class="error-box password-error">
                         <i class="ri-error-warning-line"></i>
-                        <p class="error-field">Password is!</p>
+                        <p class="error-field"></p>
                     </div>
                 </div>
             </section>
 
             <section class="form-foot">
                 <p class="terms-txt"><a href="forgotpassword.php">Forgot your password?</a></p>
-                <button type="submit" name="signup">Sign in</button>
+                <button type="submit" name="signin" id="signin-btn">Sign in</button>
                 <p class="form-switch">Don't have an account? <a href="signup.php">Create account</a></p>
             </section>
         </form>
