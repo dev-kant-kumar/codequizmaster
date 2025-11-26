@@ -13,7 +13,6 @@
         <nav class="nav-menu-container">
             <a class="nav-menu active-nav-menu" href="index.php">Home</a>
             <a class="nav-menu" href="quiz.php">Quiz</a>
-            <a class="nav-menu" href="updates.php">Updates</a>
             <a class="nav-menu" href="about.php">About</a>
         </nav>
     </section>
@@ -27,6 +26,7 @@
         <div>
             <a class="nav-menu" href="dashboard.php">Dashboard</a>
             <a class="nav-menu" href="profile.php">Profile</a>
+            <a class="nav-menu logout-btn" href="controllers/logout.php">Log out</a>
         </div>
         <div class="avatar-wrapper">
             <img src="" alt="" class="avatar">
@@ -51,7 +51,6 @@
             <p class="sec-title">Quiz Links</p>
             <a class="m-nav-menu-items m-nav-menu-active-item" href="index.php">Home</a>
             <a class="m-nav-menu-items" href="quiz.php">Quiz</a>
-            <a class="m-nav-menu-items" href="updates.php">Updates</a>
             <a class="m-nav-menu-items" href="about.php">About</a>
         </div>
         <div class="sec-c">

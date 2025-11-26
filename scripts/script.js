@@ -88,6 +88,11 @@ const accountCenter = document.querySelector(".account-center");
 const navBtn = document.querySelector(".nav-btn");
 const avatar = document.querySelector(".avatar");
 const noAvatar = document.querySelector(".no-avatar");
+const logoutBtn = document.querySelector(".logout-btn");
+
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("user");
+});
 
 if (userFound) {
   console.log("Logged in user : ", userFound);
@@ -99,7 +104,8 @@ if (userFound) {
 
   if (userFound?.avatar) {
     noAvatar.style.display = "none";
-    avatar.setAttribute("src", user.avatar);
+    console.log("user avatar", userFound.avatar);
+    avatar.setAttribute("src", "uploads/" + userFound.avatar);
   } else {
     avatar.style.display = "none";
     noAvatar.textContent = userFound?.name.charAt(0).toUpperCase();
@@ -110,5 +116,44 @@ if (userFound) {
     const userForBanner = document.querySelector(".user");
     const firstName = userFound?.name.split(" ")[0];
     userForBanner.textContent = firstName + " 👋";
+  }
+
+  if (current === "/codequizmaster/profile.php") {
+    //  profile page section
+    const uploadIcon = document.querySelector(".upload-icon");
+    const avatarUploader = document.querySelector(".avatar-input");
+    const avatar = document.querySelector(".avatar");
+
+    uploadIcon.addEventListener("click", () => {
+      avatarUploader.click();
+    });
+
+    const setUserAvatar = async (file, username) => {
+      const formData = new FormData();
+
+      formData.append("username", username);
+      formData.append("avatar", file);
+
+      const res = await fetch("controllers/updateprofile.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+      console.log("data :", data);
+      location.reload();
+
+      if (data.status) {
+        localStorage.setItem("user", JSON.stringify(data.user));
+      }
+    };
+
+    avatarUploader.addEventListener("change", () => {
+      const file = avatarUploader.files[0];
+      console.log("uploded file : ", file);
+      if (file) {
+        setUserAvatar(file, userFound.username);
+      }
+    });
   }
 }

@@ -40,7 +40,16 @@ echo json_encode([
         "username" => $user["username"],
         "email" => $user["email"],
         "gender" => $user["gender"],
+        "avatar" => $user["avatar"],
         "created_at" => $user["created_at"],
         "updated_at" => $user["updated_at"],
     ]
 ]);
+
+session_start();
+$_SESSION["name"] = $user["name"];
+$_SESSION["username"] = $user["username"];
+$_SESSION["email"] = $user["email"];
+$_SESSION["gender"] = $user["gender"];
+$_SESSION["avatar"] = $user["avatar"];
+$_SESSION["created_at"] = $user["created_at"];

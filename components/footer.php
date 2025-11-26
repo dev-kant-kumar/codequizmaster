@@ -84,7 +84,6 @@
             <div>
                 <a href="index.php">Home</a>
                 <a href="quiz.php">Quiz</a>
-                <a href="updates.php">Updates</a>
                 <a href="about.php">About</a>
             </div>
         </section>
@@ -93,7 +92,6 @@
             <div>
                 <a href="index.php">Home</a>
                 <a href="quiz.php">Quiz</a>
-                <a href="updates.php">Updates</a>
                 <a href="about.php">About</a>
             </div>
         </section>
